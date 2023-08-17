@@ -181,7 +181,8 @@ function startAnalysis(file, ext) {
             if (!zip.files[key].dir) {
               if (
                 zip.files[key].name == "minecraft.log" ||
-                zip.files[key].name == "游戏崩溃前的输出.txt"
+                zip.files[key].name == "游戏崩溃前的输出.txt" ||
+                zip.files[key].name == "latest.log"
               ) {
                 return zip.files[key].async("string")
               } else {
